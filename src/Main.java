@@ -605,8 +605,8 @@ public class Main {
                             Character wishedCharacter = WishCharacterList.characters[characterRandomId];
                             boolean characterAlreadyOwned = false;
 
-                            for (Character c : AvailableCharactersList.characters) {
-                                if (c.characterId == wishedCharacter.characterId) {
+                            for (int i=0; i<AvailableCharactersList.character.size(); i++) {
+                                if (AvailableCharactersList.character.get(i) == wishedCharacter.characterId) {
                                     characterAlreadyOwned = true;
                                     break;
                                 }
@@ -656,9 +656,9 @@ public class Main {
                             int weaponRandomId = generateRandom.nextInt(WishWeaponList.weapons.length);
                             Weapon wishedWeapon = WishWeaponList.weapons[weaponRandomId];
                             boolean weaponAlreadyOwned = false;
-
-                            for (Weapon w : AvailableWeaponsList.weapons) {
-                                if (w.weaponId == wishedWeapon.weaponId) {
+                            
+                            for (int i=0; i<AvailableWeaponsList.weapons.size(); i++) {
+                                if (AvailableWeaponsList.weapons.get(i) == wishedWeapon.weaponId) {
                                     weaponAlreadyOwned = true;
                                     break;
                                 }
